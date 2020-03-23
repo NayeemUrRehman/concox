@@ -13,7 +13,11 @@
 - Both latitude and longitude are 4 bytes , so checking the bytes `12-15` and `16-19` converting them to decimal and dividing by `1800000` will give us the latitude and longitude of the device.
 
 ### Date and time
-- 6 bytes are reserved for date and time . Starting from `year` , `month` , `day` , `hour` , `minute` , `second ` each is assigned 1 byte. Covering them into decimal will give us the date and time.
+- 6 bytes are reserved for date and time . Starting from `year` , `month` , `day` , `hour` , `minute` , `second ` each is assigned 1 byte. Covering them into decimal will give us the date and time. for our case 
+```
+    0F 0C 1D 02 33 05
+``` 
+> it will be `15 year 12 month 29 day 02 hour 51 minutes 5 seconds`
 
 ### Course and Status
 - Two  bytes are consumed, defining the running direction of GPS. The value ranges from `0° to 360° ` measured clockwise from north of `0°`
